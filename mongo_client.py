@@ -3,7 +3,7 @@ from pymongo import MongoClient
 port = 27017  # env variable
 db_url = 'cluster0-mdmj0.mongodb.net'  # env variable
 username = 'admin'                      # env variable
-password = 'wwcYVH1zeUWduWi8'           # env variable
+password = "PASSWORD"
 client = MongoClient(f"mongodb+srv://{username}:{password}@{db_url}/test?retryWrites=true&w=majority")
 db_name = client.discord_bot
 

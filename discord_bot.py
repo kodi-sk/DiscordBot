@@ -4,7 +4,7 @@ from top_searches import google_output
 from recent import recent_output
 from helpers import check_input_value
 
-TOKEN = 'Njk5NjU2MTA0NDA1MjM3ODIx.XpXjxQ.PeJz04PCxKFzaVGjsL5HTX0xStU'  # env variable
+TOKEN = "TOKEN" # env variable
 
 client = discord.Client()
 
