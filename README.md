@@ -6,9 +6,9 @@ How To Run:
 2) run pip install requirements.txt
 3) Run python discord_bot.py
 
-What Can a Bot Do:
+What Can this Bot Do:
 1) Will greet you with Hey!
-2) Can help you out with top five searches on Google. Just type !google news and top 5 Links for news will be presented
+2) Can help you out with top five links on Google. Just type !google news and top 5 Links for news will be presented
 3) You can retrieve old information of your searches. Just type !recent news, and all your google queries containing this word will be presented in front of you.
 
 Technology Used:
