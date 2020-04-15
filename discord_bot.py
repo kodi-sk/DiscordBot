@@ -3,10 +3,12 @@ from hello import hi_output, different_hi
 from top_searches import google_output
 from recent import recent_output
 from helpers import check_input_value
+import os
 
-TOKEN = "TOKEN" # env variable
+TOKEN = os.environ.get('DISCORD_TOKEN')  # env variable
 
 client = discord.Client()
+
 
 @client.event
 async def on_message(message):
