@@ -8,7 +8,6 @@ TOKEN = "TOKEN" # env variable
 
 client = discord.Client()
 
-
 @client.event
 async def on_message(message):
     if message.author == client.user:  # To stop replying on own messages
@@ -21,7 +20,7 @@ async def on_message(message):
     if message.content.startswith('!google'):
         input_val = check_input_value(message.content, "!google")
         if input_val[1] is True:  # Check Input is right Formatted
-            msgs = google_output(client.user.id, input_val[0])  # Output from Google Search
+            msgs = google_output(message.author.id, input_val[0], client.user.id)  # Output from Google Search
         else:
             msgs = [input_val[0]]  # Output Error if Input is not correctly formatted
         for msg in msgs:
@@ -30,7 +29,7 @@ async def on_message(message):
     if message.content.startswith('!recent'):
         input_val = check_input_value(message.content, "!recent")
         if input_val[1] is True:
-            msgs = recent_output(client.user.id, input_val[0])
+            msgs = recent_output(message.author.id, input_val[0], client.user.id)
         else:
             msgs = [input_val[0]]
         for msg in msgs:
@@ -46,3 +45,4 @@ async def on_ready():
 
 
 client.run(TOKEN)
+
